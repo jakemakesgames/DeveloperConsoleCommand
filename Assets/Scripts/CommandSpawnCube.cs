@@ -25,8 +25,9 @@ namespace Console
 
 			GameObject cube = GameObject.CreatePrimitive (PrimitiveType.Cube);
 			Renderer rend = cube.GetComponent<Renderer> ();
+			Shader shader = Shader.Find ("Standard");
 			rend.material.color = Color.green;
-			rend.material.shader = Shader.Find ("_Colour");
+			rend.material.shader = shader;
 			cube.transform.position = new Vector3 (0, 0, 0);
 		}
 
