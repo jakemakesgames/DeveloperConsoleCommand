@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityStandardAssets.Characters.ThirdPerson;
 
 namespace Console
 {
@@ -26,14 +27,17 @@ namespace Console
 		public static DeveloperConsole Instance { get; private set; }
 		public static Dictionary<string, ConsoleCommand> Commands { get; private set; }
 
-		[Header("UI Components")]
+		[Header("Components")]
 		public Canvas consoleCanvas;
 		public ScrollRect scrollRect;
 		public Text consoleText;
 		public Text inputText;
 		public InputField consoleInput;
+        public Material[] cubeMat;
+        public Material groundMat;
+        public GameObject thirdPersonController;
 
-		private void Awake()
+        private void Awake()
 		{
 			if (Instance != null) 
 			{
@@ -54,6 +58,21 @@ namespace Console
 			// All the command you want to create go here
 			CommandQuit commandQuit = CommandQuit.CreateCommand ();
 			CommandSpawnCube commandSpawnCube = CommandSpawnCube.CreateCommand ();
+            CommandSpawnGround commandSpawnGround = CommandSpawnGround.CreateCommand();
+            CommandSpawnThirdPersonController commandSpawnThirdPersonController = CommandSpawnThirdPersonController.CreateCommand();
+
+            //for (int i = 0; i < cubeMat.Length; i++)
+            //{
+            //    cubeMat[i].color = Random.ColorHSV();
+            //}
+
+            commandSpawnCube.mat = cubeMat;
+
+            //cubeMat[i].color = Color.green;
+            
+
+            groundMat.color = Color.white;
+            commandSpawnGround.mat = groundMat;
 		}
 
 		public static void AddCommandsToConsole(string _name, ConsoleCommand _command){

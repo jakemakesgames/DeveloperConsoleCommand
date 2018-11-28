@@ -1,9 +1,17 @@
 fileFormatVersion: 2
 guid: 973321c930718b54286253680f655870
+timeCreated: 1543364054
+licenseType: Free
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - consoleCanvas: {instanceID: 0}
+  - scrollRect: {instanceID: 0}
+  - consoleText: {instanceID: 0}
+  - inputText: {instanceID: 0}
+  - consoleInput: {instanceID: 0}
+  - groundMat: {fileID: 2100000, guid: c83d0b0fd3801f645b0a6140b4499448, type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

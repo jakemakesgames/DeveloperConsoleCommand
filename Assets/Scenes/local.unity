@@ -13,7 +13,7 @@ OcclusionCullingSettings:
 --- !u!104 &2
 RenderSettings:
   m_ObjectHideFlags: 0
-  serializedVersion: 9
+  serializedVersion: 8
   m_Fog: 0
   m_FogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   m_FogMode: 3
@@ -38,8 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657874, g: 0.4964127, b: 0.5748172, a: 1}
-  m_UseRadianceAmbientProbe: 0
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -55,10 +54,11 @@ LightmapSettings:
     m_EnableBakedLightmaps: 1
     m_EnableRealtimeLightmaps: 1
   m_LightmapEditorSettings:
-    serializedVersion: 10
+    serializedVersion: 9
     m_Resolution: 2
     m_BakeResolution: 40
-    m_AtlasSize: 1024
+    m_TextureWidth: 1024
+    m_TextureHeight: 1024
     m_AO: 0
     m_AOMaxDistance: 1
     m_CompAOExponent: 1
@@ -546,7 +546,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.01, y: 1}
   m_AnchorMax: {x: 0.99, y: 1}
-  m_AnchoredPosition: {x: -7.3093567, y: -416.84003}
+  m_AnchoredPosition: {x: -7.3093567, y: -698.36005}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &913326696
@@ -809,7 +809,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1004116244}
   m_HandleRect: {fileID: 1004116243}
   m_Direction: 2
-  m_Value: 1
+  m_Value: 0
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -990,6 +990,17 @@ MonoBehaviour:
   consoleText: {fileID: 749757145}
   inputText: {fileID: 2048249325}
   consoleInput: {fileID: 600746175}
+  cubeMat:
+  - {fileID: 2100000, guid: 02cfc27744eef1440a31a10d3ad453ec, type: 2}
+  - {fileID: 2100000, guid: c83d0b0fd3801f645b0a6140b4499448, type: 2}
+  - {fileID: 2100000, guid: 40b1f2fdb6a03ab48b5ea995a6ed5e46, type: 2}
+  - {fileID: 2100000, guid: c02d2e384382a6241b160af0368c6feb, type: 2}
+  - {fileID: 2100000, guid: 45b6742d194174f45babe503574ab9a2, type: 2}
+  - {fileID: 2100000, guid: 0b04935d7bbe1cf4b81aba8e3b91fc7f, type: 2}
+  - {fileID: 2100000, guid: 1603bd95413389d43a496dc0a64fa188, type: 2}
+  groundMat: {fileID: 2100000, guid: 0b04935d7bbe1cf4b81aba8e3b91fc7f, type: 2}
+  thirdPersonController: {fileID: 149790, guid: 7737647c22c1fc64a88d5cd030c352ce,
+    type: 2}
 --- !u!1 &1398849246
 GameObject:
   m_ObjectHideFlags: 0
