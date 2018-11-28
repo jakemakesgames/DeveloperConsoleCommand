@@ -37,6 +37,7 @@ namespace Console
         public Material groundMat;
         public GameObject thirdPersonController;
         public GameObject firstPersonController;
+		public GameObject freeCam;
 
         private void Awake()
 		{
@@ -56,14 +57,23 @@ namespace Console
 		}
 
 		private void CreateCommands(){
-			// All the command you want to create go here
+			// QUIT THE GAME
 			CommandQuit commandQuit = CommandQuit.CreateCommand ();
+
+			// SPAWN PRIMATIVES
 			CommandSpawnCube commandSpawnCube = CommandSpawnCube.CreateCommand ();
             CommandSpawnGround commandSpawnGround = CommandSpawnGround.CreateCommand();
+			CommandSpawnSphere commandSpawnSphere = CommandSpawnSphere.CreateCommand ();
+
+			// SPAWN CHARACTER CONTROLLERS
             CommandSpawnThirdPersonController commandSpawnThirdPersonController = CommandSpawnThirdPersonController.CreateCommand();
             CommandSpawnFirstPersonController commandSpawnFirstPersonController = CommandSpawnFirstPersonController.CreateCommand();
 
+			// SPAWN CAMERERAS
+			CommandSpawnFreeCam commandSpawnFreeCam = CommandSpawnFreeCam.CreateCommand ();
+
             commandSpawnCube.mat = cubeMat;
+			commandSpawnSphere.mat = cubeMat;
 
             groundMat.color = Color.white;
             commandSpawnGround.mat = groundMat;
