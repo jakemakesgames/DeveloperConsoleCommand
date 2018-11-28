@@ -36,6 +36,7 @@ namespace Console
         public Material[] cubeMat;
         public Material groundMat;
         public GameObject thirdPersonController;
+        public GameObject firstPersonController;
 
         private void Awake()
 		{
@@ -60,16 +61,9 @@ namespace Console
 			CommandSpawnCube commandSpawnCube = CommandSpawnCube.CreateCommand ();
             CommandSpawnGround commandSpawnGround = CommandSpawnGround.CreateCommand();
             CommandSpawnThirdPersonController commandSpawnThirdPersonController = CommandSpawnThirdPersonController.CreateCommand();
-
-            //for (int i = 0; i < cubeMat.Length; i++)
-            //{
-            //    cubeMat[i].color = Random.ColorHSV();
-            //}
+            CommandSpawnFirstPersonController commandSpawnFirstPersonController = CommandSpawnFirstPersonController.CreateCommand();
 
             commandSpawnCube.mat = cubeMat;
-
-            //cubeMat[i].color = Color.green;
-            
 
             groundMat.color = Color.white;
             commandSpawnGround.mat = groundMat;
